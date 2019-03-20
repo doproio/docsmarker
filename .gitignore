@@ -1,0 +1,10 @@
+dist
+*.log
+coverage
+.DS_Store
+node_modules
+dist
+
+yarn.lock
+package-lock.json
+.docsmaker

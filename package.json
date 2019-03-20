@@ -1,0 +1,78 @@
+{
+    "name": "docsmaker",
+    "version": "0.1.1",
+    "description": "文档生成工具",
+    "main": "index.js",
+    "bin": {
+        "docsmarker": "./bin/main.js"
+    },
+    "scripts": {
+        "docs": "node ./bin/main.js",
+        "docs:build": "node ./bin/main.js build"
+    },
+    "dependencies": {
+        "@vuese/markdown-render": "^2.1.0",
+        "@vuese/parser": "^2.0.2",
+        "chokidar": "^2.1.2",
+        "codesandbox": "2.1.1",
+        "commander": "^2.19.0",
+        "globby": "^9.1.0",
+        "lodash": "^4.17.11",
+        "markdown-it-container": "^2.0.0",
+        "md5": "^2.2.1",
+        "node-sass": "^4.11.0",
+        "prismjs": "^1.15.0",
+        "sass-loader": "^7.1.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.3.3",
+        "@babel/preset-env": "^7.3.1",
+        "@commitlint/cli": "^7.5.2",
+        "@commitlint/config-conventional": "^7.5.0",
+        "@vue/test-utils": "^1.0.0-beta.29",
+        "babel-core": "^7.0.0-bridge.0",
+        "babel-eslint": "^10.0.1",
+        "codecov": "^3.2.0",
+        "cross-env": "^5.2.0",
+        "eslint": "^5.14.1",
+        "eslint-config-standard": "^12.0.0",
+        "eslint-config-vue": "^2.0.2",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-node": "^8.0.1",
+        "eslint-plugin-promise": "^4.0.1",
+        "eslint-plugin-standard": "^4.0.0",
+        "eslint-plugin-vue": "^5.2.2",
+        "gh-pages": "^2.0.1",
+        "husky": "^1.3.1",
+        "jest": "^24.1.0",
+        "jest-serializer-vue": "^2.0.2",
+        "jest-transform-stub": "^2.0.0",
+        "lint-staged": "^8.1.4",
+        "markdown-it-include": "^1.1.0",
+        "rimraf": "^2.6.3",
+        "vue-jest": "^3.0.3",
+        "vuepress": "^1.0.0-alpha.39",
+        "vuepress-plugin-smooth-scroll": "^0.0.3"
+    },
+    "keywords": [
+        "vue",
+        "code",
+        "demo",
+        "vuepress",
+        "demo-code",
+        "documentation"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jeakey/docsmarker"
+    },
+    "homepage": "git+https://github.com/jeakey/docsmarker",
+    "author": "jeakeyliang",
+    "license": "MIT",
+    "docs": {
+        "title": "文档生成工具",
+        "home": "readme.md",
+        "components":["components"],
+        "dest": "dist"
+    }
+}
