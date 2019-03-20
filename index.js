@@ -11,13 +11,13 @@ let vuepressOptions={
 module.exports={
     async dev(){
         let options = await parseOptions("dev");
-        watchFiles(options);
         let docsDir = await makeFiles(options);
         await genNavAndSidebar(docsDir,options);
         process.chdir(__dirname);
         vuepressOptions.sourceDir=docsDir;
+        watchFiles(options);
         vuepress.dev(vuepressOptions);
-        // vuepress.dev(docsDir,vuepressOptions);
+        
     },
     async build(){
         let options = await parseOptions("build");
@@ -31,7 +31,7 @@ module.exports={
 }
 function watchFiles(options){
     let files = _.concat(options.home, options.components,options.docs);
-    chokidar.watch(files).on('all',async (event, path, details)=>{
+    chokidar.watch(files,{ignoreInitial:true}).on('all',async (event, path, details)=>{
         let docsDir = await makeFiles(options);
         await genNavAndSidebar(docsDir,options);
     })
