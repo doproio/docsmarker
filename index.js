@@ -5,10 +5,8 @@ const makeFiles = require("./lib/makeFiles");
 const genNavAndSidebar = require("./lib/genNavAndSidebar");
 const chokidar = require('chokidar');
 const _ = require("lodash")
-const vuepressOptions={
+let vuepressOptions={
     theme: '@vuepress/default', 
-    '--': [], 
-    cache: true
 };
 module.exports={
     async dev(){
@@ -17,7 +15,9 @@ module.exports={
         let docsDir = await makeFiles(options);
         await genNavAndSidebar(docsDir,options);
         process.chdir(__dirname);
-        vuepress.dev(docsDir,vuepressOptions);
+        vuepressOptions.sourceDir=docsDir;
+        vuepress.dev(vuepressOptions);
+        // vuepress.dev(docsDir,vuepressOptions);
     },
     async build(){
         let options = await parseOptions("build");
@@ -25,7 +25,8 @@ module.exports={
         await genNavAndSidebar(docsDir,options);
         process.chdir(__dirname);
         vuepressOptions.dest=path.join(options.cwd,options.dest);
-        vuepress.build(docsDir,vuepressOptions);
+        vuepressOptions.sourceDir=docsDir;
+        vuepress.build(vuepressOptions);
     }
 }
 function watchFiles(options){

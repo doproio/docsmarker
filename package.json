@@ -1,6 +1,6 @@
 {
     "name": "@dopro/docsmaker",
-    "version": "0.1.1",
+    "version": "0.1.3",
     "description": "文档生成工具",
     "main": "index.js",
     "bin": {
@@ -67,7 +67,9 @@
     "docs": {
         "title": "文档生成工具",
         "home": "readme.md",
-        "components":["components"],
-        "dest": "dist"
+        "components": [
+            "components"
+        ],
+        "dest": "docs"
     }
 }
