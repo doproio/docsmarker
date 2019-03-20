@@ -30,8 +30,9 @@ module.exports={
     }
 }
 function watchFiles(options){
+    console.log(options)
     let files = _.concat(options.home, options.components,options.docs);
-    chokidar.watch(files,{ignoreInitial:true}).on('all',async (event, path, details)=>{
+    chokidar.watch(files,{ignoreInitial:true,cwd:options.cwd}).on('all',async (event, path, details)=>{
         let docsDir = await makeFiles(options);
         await genNavAndSidebar(docsDir,options);
     })
