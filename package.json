@@ -22,7 +22,12 @@
         "md5": "^2.2.1",
         "node-sass": "^4.11.0",
         "prismjs": "^1.15.0",
-        "sass-loader": "^7.1.0"
+        "sass-loader": "^7.1.0",
+        "markdown-it-include": "^1.1.0",
+        "rimraf": "^2.6.3",
+        "vue-jest": "^3.0.3",
+        "vuepress": "^1.0.0-alpha.39",
+        "vuepress-plugin-smooth-scroll": "^0.0.3"
     },
     "devDependencies": {
         "@babel/core": "^7.3.3",
@@ -42,17 +47,7 @@
         "eslint-plugin-promise": "^4.0.1",
         "eslint-plugin-standard": "^4.0.0",
         "eslint-plugin-vue": "^5.2.2",
-        "gh-pages": "^2.0.1",
-        "husky": "^1.3.1",
-        "jest": "^24.1.0",
-        "jest-serializer-vue": "^2.0.2",
-        "jest-transform-stub": "^2.0.0",
-        "lint-staged": "^8.1.4",
-        "markdown-it-include": "^1.1.0",
-        "rimraf": "^2.6.3",
-        "vue-jest": "^3.0.3",
-        "vuepress": "^1.0.0-alpha.39",
-        "vuepress-plugin-smooth-scroll": "^0.0.3"
+        "lint-staged": "^8.1.4"
     },
     "keywords": [
         "vue",

@@ -15,9 +15,9 @@
 * 安装模块
 ``` sh
 # 安装到全局，可通过命令行执行
-tnpm install docsmaker -g
+tnpm install @dopro/docsmaker -g
 # 安装到项目
-tnpm install docsmaker
+tnpm install @dopro/docsmaker
 ```
 ## 配置
 docsmaker适用于js项目，配置信息写入`package.json`文件里面的`docs`字段，示例以及配置说明如下，所有配置均非必填：
