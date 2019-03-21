@@ -1,4 +1,20 @@
-const { getParameters } = require('codesandbox/lib/api/define')
+let getParameters = function(){};
+if (typeof(window) === 'undefined') {
+    try {   
+        let prefix = "";
+        if(process.argv[0].toLowerCase().indexOf("docsmaker")>=0){
+            prefix='@dopro/docsmaker/node_modules/';
+        }
+        getParameters  = require(prefix+'codesandbox/lib/api/define').getParameters
+    } catch (error) {
+        console.log(error)
+    }
+    
+} else {
+    getParameters  = require('codesandbox/lib/api/define').getParameters
+}
+
+
 const {
     CODE_SANDBOX_JS,
     CODE_SANDBOX_HTML,
