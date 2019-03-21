@@ -2,6 +2,7 @@
 
 const program = require('commander');
 const docsmarker = require("../index");
+global.isBin=true;
 program
   .version('1.0.0')
   .option('dev', 'dev mode')

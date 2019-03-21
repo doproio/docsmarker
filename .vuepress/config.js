@@ -5,7 +5,7 @@ let navAndSidebar = fs.readFileSync(path.join(__dirname,"./navAndSidebar.json"),
 navAndSidebar = JSON.parse(navAndSidebar);
 const isLineNumber=false;
 let prefix = "";
-if(process.argv[0].toLowerCase().indexOf("docsmaker")>=0){
+if(global.isBin){
     prefix='@dopro/docsmaker/node_modules/';
 }
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
     },
     title:navAndSidebar.options.title,
     head: [
-        // ['link', { rel: 'icon', href: `/favicon.ico` }]
+        ['link', { rel: 'icon', href: `/team/favicon.png` }]
     ],
     
     markdown: {

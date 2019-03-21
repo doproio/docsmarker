@@ -1,7 +1,7 @@
 const path = require('path')
 const { encodeAndStringify } = require('./utils')
 let prefix = "";
-if(process.argv[0].toLowerCase().indexOf("docsmaker")>=0){
+if(global.isBin){
     prefix='@dopro/docsmaker/node_modules/';
 }
 const markdownItContainer = require(prefix+'markdown-it-container')
