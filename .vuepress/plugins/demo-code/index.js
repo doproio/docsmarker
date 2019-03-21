@@ -1,7 +1,11 @@
 const path = require('path')
 const { encodeAndStringify } = require('./utils')
-const markdownItContainer = require('markdown-it-container')
-const markdown=require("@vuepress/markdown")
+let prefix = "";
+if(process.argv[0].toLowerCase().indexOf("docsmaker")>=0){
+    prefix='@dopro/docsmaker/node_modules/';
+}
+const markdownItContainer = require(prefix+'markdown-it-container')
+const markdown=require(prefix+"@vuepress/markdown")
 const defaults = {
     onlineBtns: {
         codepen: false,

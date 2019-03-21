@@ -4,6 +4,10 @@ const path = require("path");
 let navAndSidebar = fs.readFileSync(path.join(__dirname,"./navAndSidebar.json"),"utf8");
 navAndSidebar = JSON.parse(navAndSidebar);
 const isLineNumber=false;
+let prefix = "";
+if(process.argv[0].toLowerCase().indexOf("docsmaker")>=0){
+    prefix='@dopro/docsmaker/node_modules/';
+}
 module.exports = {
     base: '',
     configureWebpack: {
@@ -21,7 +25,7 @@ module.exports = {
     markdown: {
         lineNumbers: isLineNumber,
         extendMarkdown: (md) => {
-            md.use(require('markdown-it-include'), {
+            md.use(require(prefix+'markdown-it-include'), {
                 root: './docs/',
                 includeRe: /<\[include\]\((.+)\)/i,
             })

@@ -19,14 +19,13 @@
         "globby": "^9.1.0",
         "lodash": "^4.17.11",
         "markdown-it-container": "^2.0.0",
+        "markdown-it-include": "^1.1.0",
         "md5": "^2.2.1",
         "node-sass": "^4.11.0",
         "prismjs": "^1.15.0",
-        "sass-loader": "^7.1.0",
-        "markdown-it-include": "^1.1.0",
         "rimraf": "^2.6.3",
-        "vue-jest": "^3.0.3",
-        "vuepress": "^1.0.0-alpha.39",
+        "sass-loader": "^7.1.0",
+        "vuepress": "^1.0.0-alpha.44",
         "vuepress-plugin-smooth-scroll": "^0.0.3"
     },
     "devDependencies": {
