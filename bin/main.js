@@ -2,7 +2,9 @@
 
 const program = require('commander');
 const docsmarker = require("../index");
+const path = require("path");
 global.isBin=true;
+global.modulePath=path.join(__dirname,"../node_modules");
 program
   .version('1.0.0')
   .option('dev', 'dev mode')

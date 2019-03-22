@@ -2,6 +2,7 @@ let getParameters = function(){};
 if (typeof(window) === 'undefined') {
     try {   
         let prefix = "";
+        
         if(global.isBin){
             prefix='@dopro/docsmaker/node_modules/';
         }
@@ -13,7 +14,6 @@ if (typeof(window) === 'undefined') {
 } else {
     getParameters  = require('codesandbox/lib/api/define').getParameters
 }
-
 
 const {
     CODE_SANDBOX_JS,

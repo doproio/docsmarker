@@ -24,6 +24,7 @@ module.exports={
         
     },
     async build(){
+        global.isBuild=true;
         let options = await parseOptions("build");
         let docsDir = await makeFiles(options);
         await genNavAndSidebar(docsDir,options);
