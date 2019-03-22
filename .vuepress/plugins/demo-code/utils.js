@@ -4,7 +4,7 @@ if (typeof(window) === 'undefined') {
         let prefix = "";
         
         if(global.isBin){
-            prefix='@dopro/docsmaker/node_modules/';
+            prefix=global.modulePath+'/';
         }
         getParameters  = require(prefix+'codesandbox/lib/api/define').getParameters
     } catch (error) {

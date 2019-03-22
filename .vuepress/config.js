@@ -6,7 +6,7 @@ navAndSidebar = JSON.parse(navAndSidebar);
 const isLineNumber=false;
 let prefix = "";
 if(global.isBin){
-    prefix='@dopro/docsmaker/node_modules/';
+    prefix=global.modulePath+'/';
 }
 module.exports = {
     base: '',

@@ -2,7 +2,7 @@ const path = require('path')
 const { encodeAndStringify } = require('./utils')
 let prefix = "";
 if(global.isBin){
-    prefix='@dopro/docsmaker/node_modules/';
+    prefix=global.modulePath+'/';
 }
 const markdownItContainer = require(prefix+'markdown-it-container')
 const markdown=require(prefix+"@vuepress/markdown")
