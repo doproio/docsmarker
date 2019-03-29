@@ -1,6 +1,6 @@
 {
     "name": "@dopro/docsmaker",
-    "version": "0.1.10",
+    "version": "0.1.12",
     "description": "文档生成工具",
     "main": "index.js",
     "bin": {
