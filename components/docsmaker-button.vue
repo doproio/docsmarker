@@ -2,22 +2,24 @@
     <div :class="['ui-btn','ui-btn-'+type]">{{text}}</div>
 </template>
 <script>
-// @example {"type":"text","text":"按钮"}
+// @example {"text":"tab1","type": "text"}
 // @example {"type":"defalut","text":"确定"}
-// 带@example前缀的为示例代码，必须为json格式（比如{"type":"text","text":"按钮"}），会罗列所有example的props键值对到demo示意里面，如果没有example，则会从将所有props的默认值（第一个）中提出来展示
+// 带@example前缀的为示例代码，必须为json格式（比如{"type":"text","text":"按钮"}），会罗列所有example的props键值对到demo示意里面，如果没有example，则会从将所有props的默认值中提出来展示
 export default {
     props: {
-        
+
         text: {
             // "按钮" / "确定"
             type: String,
             default: '按钮',
         },
         type: {
-            // "text" / "default" 
+            // "text" / "default"
             type: String,
             default: 'text',
         },
+    },
+    mounted () {
     },
 }
 </script>
